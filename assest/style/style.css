@@ -37,6 +37,8 @@
        margin: 0;
        padding: 0;
        background: var(--lightblue);
+       width: 100%;
+       overflow-x: hidden;
    }
 
    /* hero */
@@ -334,42 +336,44 @@
    }
 
    /* ---------- HERO SECTION ---------- */
- 
+
    .bg-slider .owl-dots {
-    position: absolute;
-    bottom: 15px;       
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-    z-index: 99;
-}
+       position: absolute;
+       bottom: 15px;
+       left: 50%;
+       transform: translateX(-50%);
+       display: flex;
+       gap: 8px;
+       z-index: 99;
+   }
 
-.bot-n-hero .bg-slider .owl-dot {
-    width: 10px;
-    height: 10px;
-    background: rgba(255,255,255,0.6);
-    border-radius: 50%;
-    transition: 0.3s;
-}
+   .bot-n-hero .bg-slider .owl-dot {
+       width: 10px;
+       height: 10px;
+       background: rgba(255, 255, 255, 0.6);
+       border-radius: 50%;
+       transition: 0.3s;
+   }
 
-.bg-slider .owl-dot.active {
-    background: #fff;
-}
+   .bg-slider .owl-dot.active {
+       background: #fff;
+   }
+
    .bot-n-hero {
        position: relative;
        width: 100%;
        display: flex;
        align-items: flex-start;
-       justify-content: flex-end;
+       justify-content: flex-start;
        overflow: visible;
-       min-height: 100vh;
+       min-height: 90vh;
        padding-top: 4rem;
+       margin-top: 0.5rem;
    }
 
    .bg-slider .slide {
        width: 100%;
-       height: 100vh;
+       height: 90vh;
        background-size: cover;
        background-position: center;
    }
@@ -388,16 +392,17 @@
    /* ✅ form overlayed on image */
    .bot-n-hero-form-col {
        position: absolute;
-       top: 6rem;
+       bottom:-4rem;
        right: 20px;
        z-index: 2;
-       max-width: 400px;
+       max-width: 350px;
        width: 100%;
        overflow-y: auto;
+       background-color: rgba(39, 24, 2, 0.779);
+       border-radius: 14px;
    }
 
    .bot-n-hero-form {
-       background: #fff;
        padding: 25px;
        border-radius: 10px;
        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -406,7 +411,7 @@
    .bot-n-hero-form h5 {
        font-weight: 700;
        margin-bottom: 1rem;
-       color: var(--black);
+       color: var(--white);
        font-size: 1.1rem;
        text-align: center;
        margin-top: 0;
@@ -522,22 +527,24 @@
 
    /* --------- RESPONSIVE --------- */
    /* Default desktop */
-/* Desktop slides (default) */
-.bg-slider .slide:nth-child(1) {
-    background-image: url('../img/banner-1.webp');
-}
+   /* Desktop slides (default) */
+   .bg-slider .slide:nth-child(1) {
+       background-image: url('../img/banner-1.webp');
+   }
 
 
-/* Mobile slides */
-@media (max-width: 768px) {
-    .bg-slider .slide:nth-child(1) {
-        background-image: url('../img/banner-1.webp'); /* mobile version of first slide */
-    }
+   /* Mobile slides */
+   @media (max-width: 768px) {
+       .bg-slider .slide:nth-child(1) {
+           background-image: url('../img/banner-1.webp');
+           /* mobile version of first slide */
+       }
 
-    .bg-slider .slide:nth-child(2) {
-        background-image: url('../img/Mobile-banner.jpg'); /* mobile version of second slide */
-    }
-}
+       .bg-slider .slide:nth-child(2) {
+           background-image: url('../img/Mobile-banner.jpg');
+           /* mobile version of second slide */
+       }
+   }
 
    @media (max-width: 768px) {
        .bot-n-hero {
@@ -549,15 +556,13 @@
            padding: 0 !important;
        }
 
-       .bg-slider .slide{
+       .bg-slider .slide {
            height: 60vh !important;
            margin: 0 !important;
            padding: 0 !important;
            padding: 0 40px;
        }
-       .bot-n-image-item img{
-        width: fit-content !important;
-       }
+
        .bot-n-hero-form-col {
            max-width: 100%;
            margin: 0 auto;
@@ -588,21 +593,30 @@
    }
 
    .bot-n-image-item {
-       height: 50vh;
+       width: auto;
        width: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background: #000;
+       /* खाली जगह में black या कोई bg-color */
+       overflow: hidden;
    }
 
    .bot-n-image-item img {
-       width: 100%;
-       height: 100%;
-       object-fit: cover;
+       max-width: 100%;
+       max-height: 100%;
+       object-fit: contain;
+       /* पूरी image fit होगी */
+       object-position: center;
+       display: block;
    }
 
-   /* .bot-n-image-carousel .bot-n-image-item img {
+   .bot-n-image-carousel .bot-n-image-item img {
        width: 100%;
        display: block;
        height: auto;
-   } */
+   }
 
    /* Optional: customize navigation arrows */
    .owl-nav button {
@@ -915,7 +929,7 @@
    }
 
    /* ==== socila video */
-     .bot-n-social .owl-nav button {
+   .bot-n-social .owl-nav button {
        background: var(--white) !important;
        border-radius: 50%;
        width: 45px;
@@ -935,6 +949,7 @@
        background: var(--dark-bg) !important;
        color: var(--white) !important;
    }
+
    .social-card iframe {
        width: 100%;
        height: 400px;
@@ -952,6 +967,7 @@
        border-radius: 10px;
        height: 400px;
    }
+
 
    .social-owl .social-card video {
        width: 100%;
@@ -1042,12 +1058,13 @@
        font-weight: 600;
        text-align: center;
    }
-.bot-n-social .owl-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: black;
-}
+
+   .bot-n-social .owl-nav {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       color: black;
+   }
 
    .form-box p {
        margin-bottom: 15px;
@@ -1281,8 +1298,9 @@
            width: 60px;
            height: 60px;
        }
-       .bot-n-footer{
-        padding-bottom: 6rem;
+
+       .bot-n-footer {
+           padding-bottom: 6rem;
        }
    }
 
