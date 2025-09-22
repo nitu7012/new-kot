@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST['phone'] ?? '';
     $email = $_POST['email'] ?? '';
 
-    $to = "harshad.bhosale4378@gmail.com, botmediadigitalmarketing@gmail.com, nitukumari251001@gmail.com";
+    $to = "harshad.bhosale4378@gmail.com, botmediadigitalmarketing@gmail.com";
     // $to = "rakeshkumar748844@gmail.com";
     $subject = "New Lead Notification - Website";
 
