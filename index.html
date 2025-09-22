@@ -377,25 +377,25 @@
             <form id="continueForm" action="contact.php" method="post">
                 <div class="input-group">
                     <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
-                    <input type="text" class="form-control" placeholder="Enter Full Name">
+                    <input type="text"   name="fullname" class="form-control" placeholder="Enter Full Name">
                 </div>
 
                 <div class="input-group">
                     <span class="input-group-text">
                         <img src="https://flagcdn.com/w20/in.png" alt="IN Flag" style="width: 20px;">
                     </span>
-                    <input type="tel" class="form-control" placeholder="Enter Phone Number">
+                    <input type="tel"   name="phone" class="form-control" placeholder="Enter Phone Number">
                     <span class="input-group-text"><i class="fa-solid fa-caret-down"></i></span>
                 </div>
 
                 <div class="input-group">
                     <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
-                    <input type="email" class="form-control" placeholder="Enter your email (Optional)">
+                    <input type="email"   name="email" class="form-control" placeholder="Enter your email (Optional)">
                 </div>
 
                 <p style="font-size:12px; color:#666;">100% Privacy Protected. We never share your details.</p>
 
-                <button class="btn" onclick="goToThankYou()" action="contact.php" method="post">Submit</button>
+                <button class="btn"   type="submit" >Submit</button>
             </form>
         </div>
     </div>
@@ -820,7 +820,7 @@
                                 placeholder="Enter your email (Optional)">
                         </div>
 
-                        <button type="submit" class="btn-submit">Start Tour</button>
+                        <button type="submit" class="bot-n-card-property-button btn-dark-all" style="width: 100%; margin-bottom: 5px;">Start Tour</button>
                     </form>
 
 

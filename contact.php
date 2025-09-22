@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'] ?? '';
 
     $to = "harshad.bhosale4378@gmail.com, botmediadigitalmarketing@gmail.com, nitukumari251001@gmail.com";
+    // $to = "rakeshkumar748844@gmail.com";
     $subject = "New Lead Notification - Website";
 
     $message = "
@@ -23,21 +24,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </html>
     ";
 
-    $headers  = "MIME-Version: 1.0\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8\r\n";
-    $headers .= "From: <no_reply@jhamtani.com>\r\n";
+// Always set content-type when sending HTML email
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-    // Send email
-    if (mail($to, $subject, $message, $headers)) {
-        // Redirect to thank you page
-        header("Location: thankyou.html");
-        exit();
-    } else {
-        echo "<script>alert('Error sending email.'); window.location.href='index.html';</script>";
-    }
-} else {
-    // If accessed directly via GET
-    http_response_code(405);
-    echo "Method Not Allowed";
+// More headers
+$headers .= 'From: <no_reply@jhamtani.com>' . "\r\n";
+$headers .= 'Cc: ' . "\r\n";
+
+if(mail($to,$subject,$message,$headers)) //Send an Email. Return true on success or false on error
+
+
+{
+echo 
+
+"<script>window.location.href='thank-you.html';</script>";
+}
+else
+{
+echo "<script>
+alert('Plz Try Agian');
+window.location.href='index.html'
+
+;
+</script>";
+}
 }
 ?>

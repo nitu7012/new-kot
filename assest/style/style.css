@@ -540,6 +540,9 @@
 
 /* Mobile view */
 @media (max-width: 768px) {
+    .bg-slider .slide.slide-1 {
+        background-image: url('../img/Mobile-banner1.jpg') !important;
+    }
     .bg-slider .slide.slide-2 {
         background-image: url('../img/Mobile-banner.jpg') !important;
     }
@@ -556,8 +559,7 @@
            padding: 0 !important;
        }
 
-       .bg-slider .slide {
-           height: 60vh !important;
+       .bg-slider .slide { 
            margin: 0 !important;
            padding: 0 !important;
            padding: 0 40px;
@@ -646,14 +648,14 @@
        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
        display: flex;
        flex-wrap: wrap;
-       transition: transform 0.3s ease, box-shadow 0.3s ease;
+       transition: all 1s ease;
    }
 
    /* Hover effect: move card up */
    .bot-n-card-property:hover {
        transform: translateY(-15px);
        cursor: pointer;
-       border: 2px solid #493204;
+       /* border: 2px solid #493204; */
    }
 
    @keyframes floatCard {
@@ -1130,6 +1132,10 @@
    }
 
    .logo-wrapp {
+        border-radius: 3px;
+    padding: 5px;
+    overflow: hidden;
+    background: white;
        width: 80px;
        height: auto;
    }
@@ -1288,6 +1294,12 @@
 
    /* Responsive tweaks */
    @media (max-width: 768px) {
+    .footer-left {
+  
+    flex-direction: column;
+    
+    gap: 15px;
+    }
        .other-section h4 {
            font-size: 1.5rem;
        }
