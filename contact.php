@@ -37,8 +37,7 @@ if(mail($to,$subject,$message,$headers)) //Send an Email. Return true on success
 
 {
 echo 
-
-"<script>window.location.href='thank-you.html';</script>";
+"<script>window.location.href='thankyou.html';</script>";;
 }
 else
 {
