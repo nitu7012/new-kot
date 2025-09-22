@@ -392,13 +392,13 @@
    /* ✅ form overlayed on image */
    .bot-n-hero-form-col {
        position: absolute;
-       bottom:-4rem;
+      bottom: 3rem;
        right: 20px;
        z-index: 2;
        max-width: 350px;
        width: 100%;
        overflow-y: auto;
-       background-color: rgba(39, 24, 2, 0.779);
+       background-color: rgba(48, 47, 46, 0.779);
        border-radius: 14px;
    }
 
@@ -526,25 +526,25 @@
    }
 
    /* --------- RESPONSIVE --------- */
-   /* Default desktop */
-   /* Desktop slides (default) */
-   .bg-slider .slide:nth-child(1) {
-       background-image: url('../img/banner-1.webp');
-   }
+ .bg-slider .slide:nth-child(1) {
+    background-image: url('../img/banner-1.webp');
+    background-size: cover;
+    background-position: center;
+}
 
+.bg-slider .slide.slide-2 {
+    background-image: url('../img/hero.jpeg');
+    background-size: cover;
+    background-position: center;
+}
 
-   /* Mobile slides */
-   @media (max-width: 768px) {
-       .bg-slider .slide:nth-child(1) {
-           background-image: url('../img/banner-1.webp');
-           /* mobile version of first slide */
-       }
+/* Mobile view */
+@media (max-width: 768px) {
+    .bg-slider .slide.slide-2 {
+        background-image: url('../img/Mobile-banner.jpg') !important;
+    }
+}
 
-       .bg-slider .slide:nth-child(2) {
-           background-image: url('../img/Mobile-banner.jpg');
-           /* mobile version of second slide */
-       }
-   }
 
    @media (max-width: 768px) {
        .bot-n-hero {
@@ -552,7 +552,7 @@
            justify-content: flex-end;
            align-items: center;
            min-height: 60vh !important;
-           margin: 0 !important;
+           margin-top: 2rem !important;
            padding: 0 !important;
        }
 
@@ -592,33 +592,23 @@
        margin-top: 4rem !important;
    }
 
-   .bot-n-image-item {
-       width: auto;
-       width: 100%;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       background: #000;
-       /* खाली जगह में black या कोई bg-color */
-       overflow: hidden;
-   }
+ .bot-n-image-item {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: #000;
+   overflow: hidden;
+}
 
-   .bot-n-image-item img {
-       max-width: 100%;
-       max-height: 100%;
-       object-fit: contain;
-       /* पूरी image fit होगी */
-       object-position: center;
-       display: block;
-   }
+.bot-n-image-item img {
+   width: 100%;
+   height: auto;
+   object-fit: cover;   /* ya 'contain' agar crop nahi karna */
+   object-position: center;
+   display: block;
+}
 
-   .bot-n-image-carousel .bot-n-image-item img {
-       width: 100%;
-       display: block;
-       height: auto;
-   }
-
-   /* Optional: customize navigation arrows */
    .owl-nav button {
        background: rgba(0, 0, 0, 0.5);
        color: white;
@@ -631,6 +621,11 @@
        background: rgba(0, 0, 0, 0.8);
    }
 
+   @media (max-width: 768px) {
+    .bg-slider .slide.slide-2 {
+        background-image: url('../img/Mobile-banner.jpg') !important;
+    }
+}
    /* end owl crowle */
 
    /* property */
@@ -767,6 +762,7 @@
        .mobile-border {
            border: none !important;
        }
+
    }
 
    /* edn property */
@@ -950,10 +946,16 @@
        color: var(--white) !important;
    }
 
-   .social-card iframe {
+   .social-card {
        width: 100%;
        height: 400px;
+   }
+
+   .social-card iframe {
+       width: 100%;
+       height: 100%;
        border-radius: 10px;
+       object-fit: cover;
    }
 
    #social-reels {
@@ -1301,6 +1303,10 @@
 
        .bot-n-footer {
            padding-bottom: 6rem;
+       }
+
+       #social-reels {
+           padding: 10px !important;
        }
    }
 

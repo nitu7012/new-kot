@@ -82,10 +82,8 @@
         <!-- Background Slider -->
         <div class="bg-slider owl-carousel">
             <div class="slide slide-1"></div>
-            <div class="slide slide-2" style="background-image: url('./assest/img/hero.jpeg')"></div>
+            <div class="slide slide-2"></div>
         </div>
-
-
         <!-- Right Side Form -->
         <div class="bot-n-hero-form-col">
             <div class="bot-n-hero-form">
@@ -118,14 +116,23 @@
 
     <!-- owl crousel -->
     <div class="owl-carousel bot-n-image-carousel">
+        <!-- Slide 1 -->
         <div class="bot-n-image-item">
-            <img src="./assest/img/First-Search-Dsk2.jpg" alt="Slide 1">
-        </div>
-        <div class="bot-n-image-item">
-            <img src="./assest/img/GodrejRiverinedsk.jpg" alt="Slide 2">
+            <!-- Desktop Image -->
+            <img class="d-none d-md-block" src="./assest/img/First-Search-Dsk2.jpg" alt="Slide 1">
+            <!-- Mobile Image -->
+            <img class="d-block d-md-none" src="./assest/img/First-Search-Mob2.jpg" alt="Slide 1 Mobile">
         </div>
 
+        <!-- Slide 2 -->
+        <div class="bot-n-image-item">
+            <!-- Desktop Image -->
+            <img class="d-none d-md-block" src="./assest/img/GodrejRiverinedsk.jpg" alt="Slide 2">
+            <!-- Mobile Image -->
+            <img class="d-block d-md-none" src="./assest/img/GodrejRiverinemob.jpg" alt="Slide 2 Mobile">
+        </div>
     </div>
+
     <!--end owl crowels  -->
     <!-- propety start -->
     <div class="container-fluid propery" id="projects">
@@ -315,38 +322,45 @@
     <!-- ===property end -->
     <!-- soiol -->
     <section class="bot-n-social container" id="social-reels">
-        <h3>Sample flat video</h3>
+        <div class="row">
+            <div class="col-12">
+                <h3>Sample flat video</h3>
 
-        <div class="owl-carousel social-owl">
-            <a href="https://www.youtube.com/embed/EpwSc1faMh4?autoplay=1&mute=1&loop=1&playlist=EpwSc1faMh4" class="text-decoration-none">
+            </div>
+            <div class="owl-carousel social-owl">
                 <div class="social-card">
                     <iframe
                         src="https://www.youtube.com/embed/EpwSc1faMh4?autoplay=1&mute=1&loop=1&playlist=EpwSc1faMh4"
                         frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     <div class="social-overlay">Luxury Villa Tour - Click to watch</div>
                 </div>
-            </a>
 
 
-            <div class="social-card">
-                <iframe src="https://www.youtube.com/embed/6VPDXWgctTw?autoplay=1&mute=1&loop=1&playlist=6VPDXWgctTw"
-                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                <div class="social-overlay">Walkthrough Our Premium Apartments</div>
+                <div class="social-card">
+                    <iframe
+                        src="https://www.youtube.com/embed/6VPDXWgctTw?autoplay=1&mute=1&loop=1&playlist=6VPDXWgctTw"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div class="social-overlay">Walkthrough Our Premium Apartments</div>
+                </div>
+
+                <div class="social-card">
+                    <iframe
+                        src="https://www.youtube.com/embed/ZURBwa7KMz0?autoplay=1&mute=1&loop=1&playlist=ZURBwa7KMz0"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div class="social-overlay">Relax by the Pool</div>
+                </div>
+
+                <div class="social-card">
+                    <iframe
+                        src="https://www.youtube.com/embed/6VmTsbV6D1E?autoplay=1&mute=1&loop=1&playlist=6VmTsbV6D1E"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div class="social-overlay">Luxury Villa Tour</div>
+                </div>
+
             </div>
-
-            <div class="social-card">
-                <iframe src="https://www.youtube.com/embed/ZURBwa7KMz0?autoplay=1&mute=1&loop=1&playlist=ZURBwa7KMz0"
-                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                <div class="social-overlay">Relax by the Pool</div>
-            </div>
-
-            <div class="social-card">
-                <iframe src="https://www.youtube.com/embed/6VmTsbV6D1E?autoplay=1&mute=1&loop=1&playlist=6VmTsbV6D1E"
-                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                <div class="social-overlay">Luxury Villa Tour</div>
-            </div>
-
         </div>
+
+
     </section>
     <!-- Video Popup -->
     <div id="videoModal" class="video-modal">
